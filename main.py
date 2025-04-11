@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from discord import app_commands
+import os
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -45,9 +46,9 @@ async def 동기화(interaction: discord.Interaction):
 async def 닉네임확인(interaction: discord.Interaction):
     await interaction.response.send_message("🧾 닉네임 정보 확인입니다.")
 
-@tree.command(name="동글_도움말", description="동글봇 도움말을 보여줍니다.")
+@tree.command(name="뿔피리_도움말", description="뿔피리봇 도움말을 보여줍니다.")
 async def 도움말(interaction: discord.Interaction):
-    await interaction.response.send_message("📘 동글봇 도움말입니다. 파티 모집 및 설정 관련 명령어를 안내합니다.")
+    await interaction.response.send_message("📘 뿔피리봇 도움말입니다. 파티 모집 및 설정 관련 명령어를 안내합니다.")
 
 @tree.command(name="모집등록채널설정", description="모집 등록 양식을 게시할 채널을 설정합니다.")
 async def 모집등록채널설정(interaction: discord.Interaction):
